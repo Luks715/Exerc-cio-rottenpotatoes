@@ -1,0 +1,2 @@
+class MovieGoersController < ActionController
+end

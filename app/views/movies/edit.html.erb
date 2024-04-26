@@ -1,0 +1,18 @@
+<h1>Editing: <%= @movie.title %></h1>
+
+<%= link_to 'Cancel edit and go back to movie', @movie, :class => 'btn btn-primary'%>
+
+div class="container">
+    <form action="/movies" method="post">
+        <%= Movie.columns.each do |column|%>
+            <div class="container_campos">
+                <label for="<%= "movie_#{column.name}" %>"> <%= column.name.capitalize %>: </label>
+                <input type="text" placeholder="<%= "movie_#{column.name}" %>" id="<%= "movie_#{column.name}" %>" name= <%= "movie[:#{column.name}]"%>>
+            </div>
+        <%end%>
+
+        <div id="container_confirma">
+            <input type="submit" value="Edit movie">
+        </div>
+    </form>
+</div>

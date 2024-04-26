@@ -1,0 +1,19 @@
+<h1>Details about <%= @movie.title%> </h1>
+
+<div id="metadata">
+    <ul>
+        <%= Movie.columns.each do |column|%>
+            <li>
+                <%= "#{column.name.capitalize}: #{@movie.send(column.name)}"%>
+            </li>
+        <% end %>
+    </ul>
+
+    <div id="description">
+        <h2>Description: </h2>
+        <p> <%= @movie.description%> <p>
+    </div>
+</div>
+
+<%= link_to 'Edit this movie', edit_movie_path(@movie), :class => 'btn'%>
+<%= link_to 'Back to movie list', movies_path, :class => 'btn btn-primary'%>
