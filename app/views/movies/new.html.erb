@@ -7,7 +7,7 @@
         <%- Movie.columns.each do |column|%>
             <div class="container_campos">
                 <label for="<%= "movie_#{column.name}" %>"> <%= column.name.capitalize %>: </label>
-                <input type="text" placeholder="<%= "movie_#{column.name}" %>" id="<%= "movie_#{column.name}" %>" name= <%= "movie[:#{column.name}]"%>>
+                <input type="text" id="<%= "movie_#{column.name}" %>" name= <%= "movie[:#{column.name}]"%>>
             </div>
         <%end%>
 
@@ -16,3 +16,5 @@
         </div>
     </form>
 </div>
+
+#TESTE GIT COMMIT -M "UPDATE"#
