@@ -2,10 +2,14 @@
 
 <div id="metadata">
     <ul>
-        <%- Movie.columns.each do |column|%>
-            <li>
-                <%- "#{column.name.capitalize}: #{@movie.send(column.name)}"%>
-            </li>
+        <% Movie.columns.each do |column|%>
+            <% if column.name.to_s == "id" || column.name.to_s == "created_at" || column.name.to_s == "updated_at" %>
+
+            <% else%>
+                <li>
+                    <%"#{column.name.capitalize}: #{@movie.send(column.name)}"%>
+                </li>
+            <% end %>
         <% end %>
     </ul>
 
@@ -17,3 +21,4 @@
 
 <%= link_to 'Edit this movie', edit_movie_path(@movie), :class => 'btn'%>
 <%= link_to 'Back to movie list', movies_path, :class => 'btn btn-primary'%>
+
