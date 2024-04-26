@@ -2,9 +2,9 @@
 
 <div id="metadata">
     <ul>
-        <%= Movie.columns.each do |column|%>
+        <%- Movie.columns.each do |column|%>
             <li>
-                <%= "#{column.name.capitalize}: #{@movie.send(column.name)}"%>
+                <%- "#{column.name.capitalize}: #{@movie.send(column.name)}"%>
             </li>
         <% end %>
     </ul>
