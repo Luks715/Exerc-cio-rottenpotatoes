@@ -17,7 +17,9 @@ more_movies = [
 
   {:title => 'Raiders of the Lost Ark ', :rating => 'PG ', :length => '115 min', :description => 'Action-adventure', :release_date => '12 - Jun -1981 '},
 
-  {:title => 'Lord of the Rings', :rating => 'PG-13', :length => '178 min', :description => 'Fantasy epic', :release_date => '12 - Jun -1981 '}
+  {:title => 'Lord of the Rings', :rating => 'PG-13', :length => '180 min', :description => 'Fantasy epic', :release_date => '01 - Jan -2002 '},
+
+  {:title => 'Avengers: Endgame', :rating => 'PG-13', :length => '150 min', :description => 'Super hero action', :release_date => '25 - Apr -2019 '}
   ]
 
 more_movies.each do |movie|

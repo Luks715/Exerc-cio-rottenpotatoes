@@ -1,6 +1,7 @@
 <! DOCTYPE html >
 <html >
   <head >
+<<<<<<< HEAD
     <title > RottenPotatoes ! </ title >
     <link rel =" stylesheet " href = " https :// getbootstrap . com / docs /4.0/ dist / css /bootstrap . min . css " >
     
@@ -13,8 +14,26 @@
         <div class =" alert alert - info text - center " > <%= flash [: notice ]%> </div>
       <%- elsif flash [: alert ] %>
         <div class =" alert alert - danger text - center " > <%= flash [: alert ]%> </div>
+=======
+    <title> RottenPotatoes ! </title>
+    <link rel ="stylesheet" href = "https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" >
+    
+    <%= javascript_include_tag :application %>
+    <%= csrf_meta_tags %>
+  </head >
+  <body >
+    <div class ="container" >
+      <%- if flash[:notice] %>
+        <div class ="alert alert-info text-center" > <%= flash[:notice]%> </div>
+      <%- elsif flash[:alert] %>
+        <div class ="alert alert-danger text-center" > <%= flash[:alert]%> </div>
+>>>>>>> 99359d9a81d385fe0d53faead372795bf2f71db0
       <% end %>
       <%= yield %>
     </div >
   </body >
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 99359d9a81d385fe0d53faead372795bf2f71db0
