@@ -7,7 +7,7 @@
 
             <% else%>
                 <li>
-                    <%"#{column.name.capitalize}: #{@movie.send(column.name)}"%>
+                    <%="#{column.name.capitalize}: #{@movie.send(column.name)}"%>
                 </li>
             <% end %>
         <% end %>
