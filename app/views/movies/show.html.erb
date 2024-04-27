@@ -3,7 +3,7 @@
 <div id="metadata">
     <ul>
         <% Movie.columns.each do |column|%>
-            <% if column.name.to_s == "id" || column.name.to_s == "created_at" || column.name.to_s == "updated_at" %>
+            <% if column.name.to_s == "id" || column.name.to_s == "created_at" || column.name.to_s == "updated_at" || column.name.to_s == "description" %>
 
             <% else%>
                 <li>
