@@ -1,10 +1,12 @@
 <h1>Editing: <%= @movie.title %></h1>
 
 <%= link_to 'Cancel edit and go back to movie', @movie, :class => 'btn btn-primary'%>
+<%= link_to 'Delete Movie', movie_path(@movie), method: :delete, class: 'btn btn-danger' %>
 
 <div class="container">
     <form action="/movies" method="post">
-       <% Movie.columns.each do |column|%>
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        <% Movie.columns.each do |column|%>
             <% if column.name.to_s == "id" || column.name.to_s == "created_at" || column.name.to_s == "updated_at" %>
 
             <% else%>
@@ -20,4 +22,3 @@
         </div>
     </form>
 </div>
-
