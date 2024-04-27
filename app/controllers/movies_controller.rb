@@ -13,10 +13,9 @@ class MoviesController < ApplicationController
   end
 
   def create
-    @movie = Movie.new(params.require(:movie).permit(:title, :rating, :length, :description, :release_date))
-    if @movie.save
+    if @movie = Movie.create(params.require(:movie).permit(:title, :rating, :length, :description, :release_date))
       flash[:notice] = "#{@movie.title} was successfully created"
-      redirect_to movies_path(@movie)
+      redirect_to movies_path
     else
       flash[:alert] = "there was an error during the creation #{@movie.title}"
       render 'new'
