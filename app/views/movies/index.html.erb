@@ -6,10 +6,12 @@
         <div class="col-8">Movie Title</div>
         <div class="col-2">Rating</div>
         <div class="col-2">Release Date</div>
-    </div class="row">
-    <%- @movies.each do |movie|%>
-        <div class="col-8"> <%=link_to movie.title, movie_path(movie)%> </div>
-        <div class="col-2"> <%=movie.rating%></div>
-        <div class="col-2"> <%= movie.release_date.present? ? movie.release_date.strftime('%F') : 'N/A' %></div>
-    <% end %>
+    </div>
+    <div class="row">
+        <%- @movies.each do |movie|%>
+            <div class="col-8"> <%=link_to movie.title, movie_path(movie)%> </div>
+            <div class="col-2"> <%=movie.rating%></div>
+            <div class="col-2"> <%= movie.release_date.present? ? movie.release_date.strftime('%F') : 'N/A' %></div>
+        <% end %>
+    </div>
 </div>
